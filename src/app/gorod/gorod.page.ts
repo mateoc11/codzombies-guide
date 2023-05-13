@@ -30,6 +30,12 @@ export class GorodPage implements OnInit {
   public ee_6: string = ""; 
   public ee_7: string = ""; 
   public ee_8: string = ""; 
+  public ee_9: string = ""; 
+  public input_1: string = ""; 
+  public input_2: string = ""; 
+  public green_valve:string = "0";
+  public pink_valve:string = "0";
+  public combination: string = "";
   public language: string = "en";
 
   _initialiseTranslation(): void {
@@ -81,10 +87,115 @@ export class GorodPage implements OnInit {
     this._translate.get('ee_8', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
       this.ee_8 = res;
     });
+    this._translate.get('ee_9', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.ee_9 = res;
+    });
+    this._translate.get('input_1', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.input_1 = res;
+    });
+    this._translate.get('input_2', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.input_2 = res;
+    });
   }
 
   public changeLanguage(): void {
     this._translateLanguage();
+  }
+
+  public valveCombination(): void{
+      if(this.green_valve == this.pink_valve){
+        this.combination = "Invalid"
+      }
+      else if(this.green_valve == "2" && this.pink_valve == "1"){
+        this.combination = "Dept. Store - 3<br>Supply Depot - 2<br>Tank - 2<br>Infirmary -2<br>Dragon Command - 3<br>Armory"
+      }
+      else if(this.green_valve == "3" && this.pink_valve == "1"){
+        this.combination = "Dept. Store - 1<br>Supply Depot - 3<br>Tank - 1<br>Infirmary -1<br>Dragon Command - 1<br>Armory"
+      }
+      else if(this.green_valve == "4" && this.pink_valve == "1"){
+        this.combination = "Dept. Store - 1<br>Supply Depot - 1<br>Tank - 2<br>Infirmary -2<br>Dragon Command - 2<br>Armory"
+      }
+      else if(this.green_valve == "5" && this.pink_valve == "1"){
+        this.combination = "Dept. Store - 1<br>Supply Depot - 3<br>Tank - 1<br>Infirmary -3<br>Dragon Command - 2<br>Armory"
+      }
+      else if(this.green_valve == "6" && this.pink_valve == "1"){
+        this.combination = "Dept. Store - 3<br>Supply Depot - 2<br>Tank - 1<br>Infirmary -1<br>Dragon Command - 1<br>Armory"
+      }
+      else if(this.green_valve == "1" && this.pink_valve == "2"){
+        this.combination = "Armory - 1<br>Supply Depot - 3<br>Tank - 1<br>Infirmary -1<br>Dragon Command - 2<br>Dept. Store"
+      }
+      else if(this.green_valve == "3" && this.pink_valve == "2"){
+        this.combination = "Armory - 2<br>Supply Depot - 2<br>Tank - 1<br>Infirmary -1<br>Dragon Command - 1<br>Dept. Store"
+      }
+      else if(this.green_valve == "4" && this.pink_valve == "2"){
+        this.combination = "Armory - 3<br>Supply Depot - 3<br>Tank - 3<br>Infirmary -3<br>Dragon Command - 1<br>Dept. Store"
+      }
+      else if(this.green_valve == "5" && this.pink_valve == "2"){
+        this.combination = "Armory - 2<br>Supply Depot - 2<br>Tank - 1<br>Infirmary -3<br>Dragon Command - 2<br>Dept. Store"
+      }
+      else if(this.green_valve == "6" && this.pink_valve == "2"){
+        this.combination = "Armory - 3<br>Supply Depot - 2<br>Tank - 1<br>Infirmary -3<br>Dragon Command - 1<br>Dept. Store"
+      }
+      else if(this.green_valve == "1" && this.pink_valve == "3"){
+        this.combination = "Armory - 3<br>Supply Depot - 1<br>Tank - 2<br>Infirmary -2<br>Dept. Store - 2<br>Dragon Command"
+      }
+      else if(this.green_valve == "2" && this.pink_valve == "3"){
+        this.combination = "Armory - 1<br>Supply Depot - 1<br>Tank - 3<br>Infirmary -2<br>Dept. Store - 2<br>Dragon Command"
+      }
+      else if(this.green_valve == "4" && this.pink_valve == "3"){
+        this.combination = "Armory - 2<br>Supply Depot - 2<br>Tank - 2<br>Infirmary -2<br>Dept. Store - 3<br>Dragon Command"
+      }
+      else if(this.green_valve == "5" && this.pink_valve == "3"){
+        this.combination = "Armory - 3<br>Supply Depot - 3<br>Tank - 3<br>Infirmary -3<br>Dept. Store - 2<br>Dragon Command"
+      }
+      else if(this.green_valve == "6" && this.pink_valve == "3"){
+        this.combination = "Armory - 1<br>Supply Depot - 1<br>Tank - 1<br>Infirmary -1<br>Dept. Store - 1<br>Dragon Command"
+      }
+      else if(this.green_valve == "1" && this.pink_valve == "4"){
+        this.combination = "Armory - 2<br>Supply Depot - 1<br>Tank - 2<br>Dragon Command -2<br>Dept. Store - 2<br>Infirmary"
+      }
+      else if(this.green_valve == "2" && this.pink_valve == "4"){
+        this.combination = "Armory - 2<br>Supply Depot - 1<br>Tank - 2<br>Dragon Command - 3<br>Dept. Store - 1<br>Infirmary"
+      }
+      else if(this.green_valve == "3" && this.pink_valve == "4"){
+        this.combination = "Armory - 3<br>Supply Depot - 3<br>Tank - 3<br>Dragon Command - 1<br>Dept. Store - 2<br>Infirmary"
+      }
+      else if(this.green_valve == "5" && this.pink_valve == "4"){
+        this.combination = "Armory - 3<br>Supply Depot - 3<br>Tank - 3<br>Dragon Command - 3<br>Dept. Store - 3<br>Infirmary"
+      }
+      else if(this.green_valve == "6" && this.pink_valve == "4"){
+        this.combination = "Armory - 2<br>Supply Depot - 2<br>Tank - 2<br>Dragon Command - 3<br>Dept. Store - 3<br>Infirmary"
+      }
+      else if(this.green_valve == "1" && this.pink_valve == "5"){
+        this.combination = "Armory - 2<br>Infirmary - 1<br>Tank - 1<br>Dragon Command - 1<br>Dept. Store - 3<br>Supply Depot"
+      }
+      else if(this.green_valve == "2" && this.pink_valve == "5"){
+        this.combination = "Armory - 2<br>Infirmary - 3<br>Tank - 1<br>Dragon Command - 3<br>Dept. Store - 1<br>Supply Depot"
+      }
+      else if(this.green_valve == "3" && this.pink_valve == "5"){
+        this.combination = "Armory - 1<br>Infirmary - 2<br>Tank - 3<br>Dragon Command - 2<br>Dept. Store - 2<br>Supply Depot"
+      }
+      else if(this.green_valve == "4" && this.pink_valve == "5"){
+        this.combination = "Armory - 2<br>Infirmary - 3<br>Tank - 2<br>Dragon Command - 2<br>Dept. Store - 1<br>Supply Depot"
+      }
+      else if(this.green_valve == "6" && this.pink_valve == "5"){
+        this.combination = "Armory - 1<br>Infirmary - 3<br>Tank - 1<br>Dragon Command - 2<br>Dept. Store - 1<br>Supply Depot"
+      }
+      else if(this.green_valve == "1" && this.pink_valve == "6"){
+        this.combination = "Armory - 3<br>Infirmary - 3<br>Supply Depot - 3<br>Dragon Command - 1<br>Dept. Store - 2<br>Tank"
+      }
+      else if(this.green_valve == "2" && this.pink_valve == "6"){
+        this.combination = "Armory - 2<br>Infirmary - 3<br>Supply Depot - 2<br>Dragon Command - 1<br>Dept. Store - 2<br>Tank"
+      }
+      else if(this.green_valve == "3" && this.pink_valve == "6"){
+        this.combination = "Armory - 1<br>Infirmary - 1<br>Supply Depot - 3<br>Dragon Command - 3<br>Dept. Store - 1<br>Tank"
+      }
+      else if(this.green_valve == "4" && this.pink_valve == "6"){
+        this.combination = "Armory - 1<br>Infirmary - 3<br>Supply Depot - 3<br>Dragon Command - 2<br>Dept. Store - 1<br>Tank"
+      }
+      else if(this.green_valve == "5" && this.pink_valve == "6"){
+        this.combination = "Armory - 3<br>Infirmary - 2<br>Supply Depot - 2<br>Dragon Command - 3<br>Dept. Store - 3<br>Tank"
+      }
   }
 
   _translateLanguage(): void {

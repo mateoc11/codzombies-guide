@@ -70,6 +70,35 @@
       <ion-img src="../../assets/images/gorod/13-5.jpg"></ion-img><br>
       - Department Store<br>
       <ion-img src="../../assets/images/gorod/13-6.jpg"></ion-img><br>
+      {{ ee_9 }}
+      <br><br>
+      <ion-item>
+
+        <span style="color: green;">{{ input_1 }}</span>
+        <ion-select [(ngModel)]="green_valve" (ionChange)="valveCombination()">
+          <ion-select-option value="0">Select</ion-select-option>
+          <ion-select-option value="1">Armory</ion-select-option>
+          <ion-select-option value="2">Department Store</ion-select-option>
+          <ion-select-option value="3">Dragon Command</ion-select-option>
+          <ion-select-option value="4">Infirmary</ion-select-option>
+          <ion-select-option value="5">Supply Depot</ion-select-option>
+          <ion-select-option value="6">Tank Factory</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <span style="color:purple;">{{ input_2 }}</span>
+        <ion-select [(ngModel)]="pink_valve" (ionChange)="valveCombination()">
+          <ion-select-option value="0">Select</ion-select-option>
+          <ion-select-option value="1">Armory</ion-select-option>
+          <ion-select-option value="2">Department Store</ion-select-option>
+          <ion-select-option value="3">Dragon Command</ion-select-option>
+          <ion-select-option value="4">Infirmary</ion-select-option>
+          <ion-select-option value="5">Supply Depot</ion-select-option>
+          <ion-select-option value="6">Tank Factory</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <br><br>
+      <span [innerHTML]="combination"></span>
     </p>
   </div>
 </ion-content>

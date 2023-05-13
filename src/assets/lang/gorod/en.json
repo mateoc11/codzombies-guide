@@ -14,6 +14,9 @@
     "ee_5": "5. Activate the giant robot's laser in the supply depot. The trophy will be in a hole where the laser shot.",
     "ee_6": "6. Shoot with the fafnir shield in the pipe on the wall, near Double-Tap, in the Tank Factory.",
     "ee_7": "In this step, you must activate a generator that stands in the Pack-a-Punch area, near the egg incubator.<br><br>To do so, you must destroy a Valkyrie drone close to the generator, or lure it into shooting it. Then, just interact with the generator, a flow of air should be seen",
-    "ee_8": "After turning on the generator, you will have to look for 6 valves around the map, these are the locations (look for one with a green light and another one with a cylinder stuck on it):"
-
+    "ee_8": "After turning on the generator, you will have to look for 6 valves around the map, these are the locations (look for one with a green light and another one with a cylinder stuck on it):",
+    "ee_9": "After finding the green light and stuck cylinder, youll have to put a certain combination on the valves, for that the next program will tell you the combination",
+    "input_1": "Select green light valve:",
+    "input_2": "Select stuck cylinder valve:",
+    "ee_10": "After placing the right combination on the valves, go to the valve with the cylinder stuck on it and you will be able to grab it, take it and place it on S.O.P.H.I.A next to the power, after doing so input the combination KRONOS on the letters and interact with S.O.P.H.I.A to confirm"
 }
