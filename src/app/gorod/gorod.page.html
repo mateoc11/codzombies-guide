@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ map }}</ion-title>
+    <ion-title >{{ map }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,6 +14,7 @@
       <ion-title size="large" class="ion-text-center">Gorod Krovi</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-note class="ion-text-center">Credits: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=724585259">Steam Guide</a></ion-note>
   <ion-item>
     <ion-select [(ngModel)]="language" [value]="language" (ionChange)="changeLanguage()">
       <ion-select-option value="en">English</ion-select-option>
