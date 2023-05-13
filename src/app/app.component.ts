@@ -9,6 +9,5 @@ export class AppComponent {
     { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
     { title: 'Gorod Krovi', url: '/gorod', icon: 'skull' }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
 }

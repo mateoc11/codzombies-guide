@@ -20,6 +20,16 @@ export class GorodPage implements OnInit {
   public prep_1: string = "";
   public prep_2: string = ""; 
   public prep_3: string = ""; 
+  public prep_4: string = ""; 
+  public prep_5: string = ""; 
+  public ee_1: string = ""; 
+  public ee_2: string = ""; 
+  public ee_3: string = ""; 
+  public ee_4: string = ""; 
+  public ee_5: string = ""; 
+  public ee_6: string = ""; 
+  public ee_7: string = ""; 
+  public ee_8: string = ""; 
   public language: string = "en";
 
   _initialiseTranslation(): void {
@@ -40,6 +50,36 @@ export class GorodPage implements OnInit {
     });
     this._translate.get('prep_3', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
       this.prep_3 = res;
+    });
+    this._translate.get('prep_4', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.prep_4 = res;
+    });
+    this._translate.get('prep_5', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.prep_5 = res;
+    });
+    this._translate.get('ee_1', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.ee_1 = res;
+    });
+    this._translate.get('ee_2', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.ee_2 = res;
+    });
+    this._translate.get('ee_3', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.ee_3 = res;
+    });
+    this._translate.get('ee_4', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.ee_4 = res;
+    });
+    this._translate.get('ee_5', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.ee_5 = res;
+    });
+    this._translate.get('ee_6', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.ee_6 = res;
+    });
+    this._translate.get('ee_7', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.ee_7 = res;
+    });
+    this._translate.get('ee_8', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.ee_8 = res;
     });
   }
 
