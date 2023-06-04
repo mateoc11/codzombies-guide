@@ -101,7 +101,62 @@
       <br><br>
       <span [innerHTML]="combination"></span>
       <br><br>
-      
+      {{ ee_10 }}
+      <b>Second part:</b>
+      <br><br>
+      {{ ee_11 }}
+      <ion-img src="../../assets/images/gorod/14.jpg"></ion-img>
+      <br><br>
+      <b>{{ ee_12 }}</b>
     </p>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" size-md="4" size-lg="2" (click)="scrollTo('first')" style="border: 5px solid #6e1e1e;"><ion-img src="../../assets/images/gorod/14-1.PNG"></ion-img></ion-col>
+        <ion-col size="6" size-md="4" size-lg="2" (click)="scrollTo('second')" style="border: 5px solid #6e1e1e;"><ion-img src="../../assets/images/gorod/14-2.PNG"></ion-img></ion-col>
+        <ion-col size="6" size-md="4" size-lg="2" (click)="scrollTo('third')" style="border: 5px solid #6e1e1e;"><ion-img src="../../assets/images/gorod/14-3.PNG"></ion-img></ion-col>
+        <ion-col size="6" size-md="4" size-lg="2" (click)="scrollTo('fourth')" style="border: 5px solid #6e1e1e;"><ion-img src="../../assets/images/gorod/14-4.PNG"></ion-img></ion-col>
+        <ion-col size="6" size-md="4" size-lg="2" (click)="scrollTo('fifth')" style="border: 5px solid #6e1e1e;"><ion-img src="../../assets/images/gorod/14-5.PNG"></ion-img></ion-col>
+        <ion-col size="6" size-md="4" size-lg="2" (click)="scrollTo('sixth')" style="border: 5px solid #6e1e1e;"><ion-img src="../../assets/images/gorod/14-6.PNG"></ion-img></ion-col>
+      </ion-row>
+    </ion-grid>  
+    <br><br>
+    <ion-accordion-group #accordionGroup>
+      <ion-accordion value="first" id="first">
+        <ion-item slot="header" color="light">
+          <ion-label>{{ trophy_1 }}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">First Content</div>
+      </ion-accordion>
+      <ion-accordion value="second" id="second">
+        <ion-item slot="header" color="light">
+          <ion-label >{{ trophy_2 }}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Second Content</div>
+      </ion-accordion>
+      <ion-accordion value="third" id="third">
+        <ion-item slot="header" color="light">
+          <ion-label>{{ trophy_3 }}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Third Content</div>
+      </ion-accordion>
+      <ion-accordion value="fourth" id="fourth">
+        <ion-item slot="header" color="light">
+          <ion-label>{{ trophy_4 }}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Fourth Content</div>
+      </ion-accordion>
+      <ion-accordion value="fifth" id="fifth">
+        <ion-item slot="header" color="light">
+          <ion-label>{{ trophy_5 }}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Fifth Content</div>
+      </ion-accordion>
+      <ion-accordion value="sixth" id="sixth">
+        <ion-item slot="header" color="light">
+          <ion-label>{{ trophy_6 }}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Sixth Content</div>
+      </ion-accordion>
+    </ion-accordion-group>
   </div>
 </ion-content>

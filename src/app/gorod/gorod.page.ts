@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { IonAccordionGroup, IonContent } from '@ionic/angular';
 
 @Component({
   selector: 'app-gorod',
@@ -13,6 +14,19 @@ export class GorodPage implements OnInit {
   ngOnInit() {
     this.changeLanguage();
   }
+  
+
+  @ViewChild('accordionGroup', { static: true }) accordionGroup!: IonAccordionGroup;
+  @ViewChild(IonContent) content!: IonContent;
+
+  toggleAccordion = (param1:string) => {
+    const nativeEl = this.accordionGroup;
+    if (nativeEl.value === param1) {
+      nativeEl.value = undefined;
+    } else {
+      nativeEl.value = param1;
+    }
+  };
 
   public layout: string = "";
   public map: string = "";
@@ -31,6 +45,15 @@ export class GorodPage implements OnInit {
   public ee_7: string = ""; 
   public ee_8: string = ""; 
   public ee_9: string = ""; 
+  public ee_10: string = ""; 
+  public ee_11: string = ""; 
+  public ee_12: string = ""; 
+  public trophy_1: string = ""; 
+  public trophy_2: string = ""; 
+  public trophy_3: string = ""; 
+  public trophy_4: string = ""; 
+  public trophy_5: string = ""; 
+  public trophy_6: string = ""; 
   public input_1: string = ""; 
   public input_2: string = ""; 
   public green_valve:string = "0";
@@ -96,8 +119,38 @@ export class GorodPage implements OnInit {
     this._translate.get('input_2', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
       this.input_2 = res;
     });
+    this._translate.get('ee_11', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.ee_11 = res;
+    });
+    this._translate.get('ee_12', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.ee_12 = res;
+    });
+    this._translate.get('trophy_1', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.trophy_1 = res;
+    });
+    this._translate.get('trophy_2', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.trophy_2 = res;
+    });
+    this._translate.get('trophy_3', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.trophy_3 = res;
+    });
+    this._translate.get('trophy_4', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.trophy_4 = res;
+    });
+    this._translate.get('trophy_5', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.trophy_5 = res;
+    });
+    this._translate.get('trophy_6', { name_value: 'Marissa Mayer' }).subscribe((res: string) => {
+      this.trophy_6 = res;
+    });
   }
 
+
+  scrollTo(_id: string) {
+    this.toggleAccordion(_id);
+    let y = document.getElementById(_id)!.offsetTop;
+    this.content.scrollToPoint(0, y);
+  }
   public changeLanguage(): void {
     this._translateLanguage();
   }
